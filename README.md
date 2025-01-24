@@ -1,5 +1,5 @@
 # <img src="https://github.com/user-attachments/assets/caabfdf0-0f9e-44a3-8200-c6579fe87887" alt="ícone de descrição" width="28"> Descrição
-O código ao ser executado fornece informações de viabilidade de investimento sobre as ações da Apple(APPL) utilizando a biblioteca ```yfinance``` , juntamente com o LLM da Openai para fazer interação com o Chat GPT.
+O código ao ser executado fornece informações de viabilidade de investimento sobre as ações da Apple(AAPL) utilizando a biblioteca ```yfinance``` , juntamente com o LLM da Openai para fazer interação com o Chat GPT.
 
 De modo adicional, foi utilizada a biblioteca ```crewai``` para criação de uma IA com funções específicas.
 
