@@ -1,4 +1,3 @@
-# IMPORT DAS LIBS
 import json
 import os
 from datetime import datetime
@@ -11,8 +10,6 @@ from langchain.tools import Tool
 from langchain_openai import ChatOpenAI
 from langchain_community.tools import DuckDuckGoSearchResults
 
-
-# CRIANDO YAHOO FINANCE TOOL
 def fetch_stock_price(ticket):
     stock = yf.download(ticket, start="2023-08-08", end="2024-08-08")
     return stock
@@ -23,7 +20,6 @@ yahoo_finance_tool = Tool(
     func= lambda ticket: fetch_stock_price(ticket)
 )
 
-# IMPORTANDO OPENAI LLM - GPT
 os.environ['OPENAI_API_KEY'] = "YOUR_OPENAI_KEY"
 llm = ChatOpenAI(model="gpt-3.5-turbo")
 
@@ -47,7 +43,6 @@ getStockPrice =  Task(
     agent= stockPriceAnalyst
 )
 
-# IMPORTANDO A TOOL DE SEARCH
 search_tool = DuckDuckGoSearchResults(backend='news', num_results=10)
 
 newsAnalyst = Agent(
